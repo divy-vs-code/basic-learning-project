@@ -12,7 +12,7 @@ r = sr.Recognizer()
 def listen():
     with sr.Microphone() as source:
         r.adjust_for_ambient_noise(source, duration=7)
-        print("Speak...",end="")
+        print("Speak...")
         audio = r.listen(source, phrase_time_limit=6)
         
 
@@ -79,8 +79,7 @@ def generate_response(ai_text_recognize: str) -> str:
         
         response_text += chunk["message"]["content"]
         print(chunk["message"]["content"],end="", flush=True)
-
-    print("\n")
+    print()
     return response_text
 
 
