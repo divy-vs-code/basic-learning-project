@@ -56,7 +56,7 @@ def handle_command(command: str):
     elif "exit" in command or "quit" in command:
         speak("Goodbye")
         return False
-    
+     
     else:
         response = generate_response(command)
         speak(response)
