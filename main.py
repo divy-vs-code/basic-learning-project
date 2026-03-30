@@ -51,6 +51,11 @@ def handle_command(command: str):
         speak("Opening Instagram.")
         webbrowser.open("https://www.instagram.com")
         return True
+    
+    elif "open WhatsApp" in command:
+        speak("Opening Whatsapp.")
+        webbrowser.open("https://www.whatsapp.com")
+        return True
 
 
     elif "exit" in command or "quit" in command:
